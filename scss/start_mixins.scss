@@ -1,0 +1,134 @@
+@import "start_colors.scss";
+
+@mixin header{
+    padding: 8px 16px;
+    margin: 4px 8px;
+
+    .contains{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+            
+        a.logo{
+            border-radius: 4px;
+            margin: 4px;
+
+            img{
+                width: 100px;
+                padding: 8px 16px;
+            }
+        }
+
+        a.language{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4px 8px;
+            border-radius: 4px;
+            transition: .4s;
+
+            svg{
+                width: 20px;
+                padding: 4px 2px 4px 16px;
+            }
+
+            p{
+                padding: 4px 16px 4px 2px;
+                color: black;
+            }
+
+            &:hover{
+                background: $btn_hover_color;
+            }
+        }
+    }
+}
+
+@mixin main{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contains{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        h2.login_title{
+            padding: 8px 16px;
+            margin-bottom: 20px;
+        }
+
+        form.login_form{
+            display: flex;
+            flex-direction: column;
+
+            a.pass_forgot{
+                display: flex;
+                justify-content: flex-end;
+                color: $pass_forgot_color;
+
+                padding: 8px 1px 1px 1px;
+            }
+
+            a.login_btn{
+                text-align: center;
+                padding: 8px 16px;
+                margin: 8px;
+                background: $primary_color;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: .4s;
+
+                &:hover{
+                    background: $primary_color_hover;
+                }
+            }
+        } 
+    }
+}
+
+@mixin footer{
+    //я не розумію чому кнопочки різного розміру
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contains{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        a{
+            padding: 8px 16px;
+
+            img{
+                width: 148px;
+
+                img.googleplay{
+                    height: 65px;
+                }
+
+                img.appstore{
+                    height: 44px;
+                }
+            }
+        }
+    }
+}
+
+@mixin input{
+    margin: 4px 8px;
+    padding: 8px 16px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px $box_shadow_color;
+    background: $secondary_color;
+}
